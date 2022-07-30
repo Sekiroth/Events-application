@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS user_service.users
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS user_service.users
-    OWNER to postgres;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    OWNER to postgres;
