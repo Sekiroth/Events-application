@@ -1,0 +1,1 @@
+An app for searching, managing, and creating leisure events such as films, concerts. Its goal is to help people find entertainment in the city.

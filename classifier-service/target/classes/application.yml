@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      format_sql: "true"
+      dialect: "org.hibernate.dialect.PostgreSQL10Dialect"
+  application:
+    name: "classifier_service"
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/afisha?currentSchema=classifier_service"
+    schema: "demo"
+    password: "postgres"
+    username: "postgres"
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+    include-exception: true
+jackson:
+  property-naming-strategy: "SNAKE_CASE"
+user:
+  get:
+    url: "http://localhost:8082/api/v1/users/me"

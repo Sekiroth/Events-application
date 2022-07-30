@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    hibernate:
+      format_sql: "true"
+      dialect: "org.hibernate.dialect.PostgreSQL10Dialect"
+  application:
+    name: "afisha"
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/afisha?currentSchema=user_service"
+    schema: "demo"
+    password: "postgres"
+    username: "postgres"
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp
+      suffix: .jsp
+server:
+  port: 8082
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+    include-exception: true
+jackson:
+  property-naming-strategy: "SNAKE_CASE"
+
