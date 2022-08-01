@@ -7,7 +7,7 @@ spring:
     name: "classifier_service"
   datasource:
     driver-class-name: "org.postgresql.Driver"
-    url: "jdbc:postgresql://localhost:5432/afisha?currentSchema=classifier_service"
+    url: "jdbc:postgresql://db:5432/classifiers?currentSchema=classifier_service"
     schema: "demo"
     password: "postgres"
     username: "postgres"
@@ -20,6 +20,3 @@ server:
     include-exception: true
 jackson:
   property-naming-strategy: "SNAKE_CASE"
-user:
-  get:
-    url: "http://localhost:8082/api/v1/users/me"

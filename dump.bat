@@ -1,0 +1,1 @@
+docker save -o afisha.dump classifier-service:0.0.1 event-service:0.0.1 user-service:0.0.1 afisha_pgadmin:1.0.0 afisha_postgresql:1.0.0 afisha_proxy:1.0.0

@@ -28,9 +28,9 @@ services:
     networks:
       - afisha_ntwrk
 
-  events-service:
-    build: events-service
-    image: afisha_events-service:1.0.0
+  event-service:
+    build: event-service
+    image: afisha_event-service:1.0.0
     networks:
       - afisha_ntwrk
   classifier-service:
@@ -38,6 +38,11 @@ services:
     image: afisha_classifier-service:1.0.0
     networks:
       - afisha_ntwrk
+  user-service:
+    build: user-service
+    image: afisha_classifier-service:1.0.0
+    networks:
+      -afisha_ntwrk
 
   proxy:
     build: proxy

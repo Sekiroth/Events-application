@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
         <module name="event-service" />
-        <module name="user_service" />
       </profile>
     </annotationProcessing>
   </component>

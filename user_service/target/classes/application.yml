@@ -7,7 +7,7 @@ spring:
     name: "afisha"
   datasource:
     driver-class-name: "org.postgresql.Driver"
-    url: "jdbc:postgresql://localhost:5432/afisha?currentSchema=user_service"
+    url: "jdbc:postgresql://db:5432/users?currentSchema=user_service"
     schema: "demo"
     password: "postgres"
     username: "postgres"

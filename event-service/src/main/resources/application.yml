@@ -7,7 +7,7 @@ spring:
     name: event-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/afisha?currentSchema=event_service
+    url: jdbc:postgresql://db:5432/events?currentSchema=event_service
     schema: demo
     password: postgres
     username: postgres
@@ -20,6 +20,3 @@ server:
     include-exception: true
 jackson:
   property-naming-strategy: SNAKE_CASE
-user:
-  get:
-    url: "http://localhost:8082/api/v1/users/me"

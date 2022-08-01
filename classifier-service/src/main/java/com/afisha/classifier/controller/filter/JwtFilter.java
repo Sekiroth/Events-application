@@ -24,11 +24,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
-    private final String url;
     private final RestTemplate restTemplate;
 
-    public JwtFilter(@Value ("${user.get.url}") String url, RestTemplate restTemplate) {
-        this.url = url;
+    public JwtFilter(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
@@ -53,7 +51,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         // Get user identity and set it on the spring security context
 
-        String url = "http://localhost:8082/api/v1/users/me";
+        String url = "http://user-service:82/api/v1/users/me";
         String newToken = "Bearer " + JwtTokenUtil.generateAccessToken(JwtTokenUtil.getUsername(token));
         final HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.AUTHORIZATION, newToken);
