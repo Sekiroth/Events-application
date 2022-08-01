@@ -1,11 +1,6 @@
-CREATE DATABASE afisha
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'en_US'
-    LC_CTYPE = 'en_US'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
+CREATE DATABASE classifiers;
+
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
 
 CREATE SCHEMA IF NOT EXISTS classifier_service
     AUTHORIZATION postgres;
@@ -38,6 +33,10 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS classifier_service.classifier_country
     OWNER to postgres;
+
+CREATE DATABASE events;
+
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
 
 CREATE SCHEMA IF NOT EXISTS event_service
     AUTHORIZATION postgres;
@@ -84,6 +83,10 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS event_service.event_concert
     OWNER to postgres;
+
+CREATE DATABASE users;
+
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
 
 CREATE SCHEMA IF NOT EXISTS user_service
     AUTHORIZATION postgres;
